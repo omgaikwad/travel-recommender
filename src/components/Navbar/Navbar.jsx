@@ -4,14 +4,9 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <nav className={styles["navbar"]}>
-      <div className={styles["nav_left_container"]}>
-        <div className={styles["nav_logo_container"]}>TripWise AI</div>
-      </div>
-
-      <div className={styles["nav_right_container"]}>
-        <div className={styles["nav_right_item"]}>Home</div>
-        <div className={styles["nav_right_item"]}>About</div>
-        <div className={styles["nav_right_item"]}>Contact</div>
+      <div className={styles["logo_container"]}>
+        <img className={styles["logo"]} src="/assets/logo.png" alt="logo" />
+        <p className={styles["brand_name"]}>TripWise AI</p>
       </div>
     </nav>
   );

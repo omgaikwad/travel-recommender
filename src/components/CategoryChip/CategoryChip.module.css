@@ -1,0 +1,37 @@
+.category_chips_container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  grid-area: chips;
+  flex-wrap: wrap;
+}
+
+.category_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category_chip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 2rem;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  background-color: transparent;
+}
+.category_chip p {
+  margin: 0;
+}
+.active_category_chip {
+  background-color: var(--primary);
+  color: var(--background);
+  border: none;
+}
+.category_chip i {
+  margin-right: 8px;
+}
