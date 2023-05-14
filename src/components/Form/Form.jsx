@@ -1,30 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Form.module.css";
-import CategoryChip from "../CategoryChip/CategoryChip";
 
-const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    age: "",
-    destination: "",
-  });
-
-  const [category, setCategory] = useState([]);
-
-  const inputHandler = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const categoryChipHandler = (categoryChip) => {
-    if (category.includes(categoryChip)) {
-      setCategory((prev) => prev.filter((item) => item !== categoryChip));
-    } else {
-      setCategory((prev) => [...prev, categoryChip]);
-    }
-  };
-
-  console.log(formData);
-
+const Form = ({
+  category,
+  inputHandler,
+  categoryChipHandler,
+  prompt,
+  createTravelPlan,
+}) => {
   return (
     <div className={styles["form_wrapper"]}>
       <div className={styles["form_container"]}>
@@ -34,6 +17,7 @@ const Form = () => {
           id="name"
           name="name"
           placeholder="Name"
+          required={true}
         />
         <input
           onChange={(e) => inputHandler(e)}
@@ -41,6 +25,7 @@ const Form = () => {
           id="age"
           name="age"
           placeholder="Age"
+          required={true}
         />
         <input
           onChange={(e) => inputHandler(e)}
@@ -48,6 +33,7 @@ const Form = () => {
           id="destination"
           name="destination"
           placeholder="Destination"
+          required={true}
         />
       </div>
 
@@ -112,7 +98,12 @@ const Form = () => {
         </button>
       </div>
 
-      <button className={styles["search_btn"]}>Search</button>
+      <button
+        onClick={() => createTravelPlan(prompt)}
+        className={styles["search_btn"]}
+      >
+        Search
+      </button>
     </div>
   );
 };

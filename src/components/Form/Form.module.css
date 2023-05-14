@@ -60,9 +60,12 @@
 }
 
 .category_container {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .category_chip {
@@ -76,6 +79,7 @@
   border: 2px solid var(--primary);
   cursor: pointer;
   background-color: transparent;
+  width: fit-content;
 }
 .category_chip p {
   margin: 0;
