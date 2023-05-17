@@ -24,3 +24,21 @@
   color: var(--primary);
   font-family: cursive;
 }
+
+.right_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav_link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  filter: brightness(1.4);
+  transition: all 0.3s ease-in-out;
+}
