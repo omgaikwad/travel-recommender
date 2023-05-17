@@ -36,6 +36,9 @@
   font-weight: 500;
   color: var(--primary);
   text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .nav_link:hover {

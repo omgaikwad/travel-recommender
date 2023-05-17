@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className={styles["navbar"]}>
       <div className={styles["logo_container"]}>
@@ -10,15 +12,21 @@ const Navbar = () => {
       </div>
 
       <div className={styles["right_container"]}>
-        <a className={styles["nav_link"]} href="/">
+        <button className={styles["nav_link"]} onClick={() => navigate("/")}>
           Home
-        </a>
-        <a className={styles["nav_link"]} href="/about">
+        </button>
+        <button
+          className={styles["nav_link"]}
+          onClick={() => navigate("/about")}
+        >
           About
-        </a>
-        <a className={styles["nav_link"]} href="/contact">
+        </button>
+        <button
+          className={styles["nav_link"]}
+          onClick={() => navigate("/contact")}
+        >
           Contact
-        </a>
+        </button>
       </div>
     </nav>
   );
